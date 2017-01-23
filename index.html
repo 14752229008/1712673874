@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script src="http://google.github.io/traceur-compiler/bin/traceur.js" type="text/javascript"></script>
+    <style>
+        *{
+            font-family: "Microsoft YaHei"
+        }
+    </style>
     <!-- 打开实验选项，否则有些特性可能编译不成功 -->
     <!--<script>
     traceur.options.experimental = true;
@@ -53,11 +58,47 @@
         // var b=2; //再用let声明变量后 用var声明相同变量 会报以声明变量的错误
 
         // 暂时性死区
-        var down=123;
-        if(true){
-            console.log(down);
-            let down="";
-        }
+        // var down=123;
+        // if(true){
+        //     console.log(down); //报错
+        //     let down="";
+        // }
+        // if(true){
+        //     // tmp=123; //报错
+        //     // console.log(tmp); //报错
+        //     let tmp;  
+        //     console.log(tmp); //undefined
+        //     tmp=12;
+        //     console.log(tmp); //12
+        // }
+        // console.log(typeof x); // ReferenceError
+        // let x;
+        // function func(b=2,a=b){
+            
+        //     return document.write([a,b])
+        // }
+        // func();
+        //不可重复声明变量
+        // function func1(){
+        //     let a=1;
+        //     var a=1;
+        // }
+        // function func2(){
+        //     let a=1;
+        //     let a=1;
+        // }
+        // //func1(); //报错
+        // //func2(); //报错
+        // function func (age){
+        //     let age=2; //报错
+        // }
+        // func(1);
+        // function func (age){
+        //     {
+        //         let age=2;
+        //     }
+        // }
+        // func(1);
     </script>
     <script >
         // console.log(1);
