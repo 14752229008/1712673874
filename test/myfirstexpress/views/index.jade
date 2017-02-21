@@ -1,0 +1,37 @@
+extends layout
+- var bool=true;
+block content
+  h1= title
+  p Welcome to #{title}
+  // 这是不隐藏的注释
+  //- 这是吟唱的注释
+  ul
+    li 
+      input(type="text" value="hh")
+    
+    li(class=bool?"hh":"xx") xx
+    li 
+      - var currentUrl = '/about' 
+      a(class={active: currentUrl === '/'} href='/') Home 
+      a(class={active: currentUrl === '/about'} href='/about') About 
+      a(class={active: currentUrl === "/aaa"} href='/hhh') hhh 
+      a.active
+      .active(style={'color':"#e4393c","background":"#eee"}) jade
+      - var attributes={'data-foo':'foo'};
+      div#feoo(data-ber="ber")&attributes(attributes) aa
+      - var attributes = {'data-foo': 'bar'}; 
+      div#foo(data-bar="foo")&attributes(attributes) aa
+      p 问你啥的积分i啊哦史蒂夫哈撒你的
+      p 
+        | wn啊收到看到啊平均分爬山的
+        | 看强迫阿娇事发啊是的可怕附件
+        
+      p.
+        asdadaasda
+        asdasfkoo
+  ul
+    - for(var i=0;i<3;i++)
+      li <a>这里是斯巴达</a>
+
+
+
