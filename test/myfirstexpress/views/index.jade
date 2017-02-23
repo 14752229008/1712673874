@@ -1,13 +1,15 @@
 extends layout
 - var bool=true;
+- var name=module.exports.name;
+- console.log(name);
 block content
   h1= title
   p Welcome to #{title}
   // 这是不隐藏的注释
   //- 这是吟唱的注释
   ul
-    li 
-      input(type="text" value="hh")
+    li(style={'display': 'inline-block','width': '149px','border': '1px solid #000'}) 
+      input(type="text" value=name)
     
     li(class=bool?"hh":"xx") xx
     li 
@@ -32,6 +34,8 @@ block content
   ul
     - for(var i=0;i<3;i++)
       li <a>这里是斯巴达</a>
+    li
+      = 'this is <shibada>'
 
 
 
