@@ -1,0 +1,27 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "My First Command",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["echo cmd1"]
+        },
+        {
+            "taskName": "My Command Requiring .bash_profile",
+            "suppressTaskName": true,
+            "args": ["source ~/.bash_profile && echo cmd2"]
+        },
+        {
+            "taskName": "My Python task",
+            "suppressTaskName": true,
+            "args": ["/usr/bin/python ${file}"]
+        }
+    ]
+}
