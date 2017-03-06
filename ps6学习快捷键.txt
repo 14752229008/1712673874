@@ -1,0 +1,6 @@
+ctrl+o 打开图片
+ctrl+s 保存图片
+ctrl+shift+s 另存为
+ctrl+shift+Alt+s 保存为web格式
+
+当我们进行画图 画笔 使用的颜色用的是前景色 背景的颜色就是背景色

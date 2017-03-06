@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');//访问默认首页的地址
 var users = require('./routes/users');
+var test = require('./routes/test');
 
 var app = express(); //express模块执行，赋值给app变量
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes); //访问默认首页的地址
 app.use('/users', users);
+app.use('/test', test);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

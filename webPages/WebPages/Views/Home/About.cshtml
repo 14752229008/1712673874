@@ -3,5 +3,24 @@
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
-
+<h4>hhda</h4>
 <p>Use this area to provide additional information.</p>
+<script>
+    $(function () {
+
+        //$("h2").css("background","#ccc");
+        $("h4").attr("data-title",{name:'ok'});
+    });
+    function* fibs(){
+        var a =0;
+        var b=1;
+        while(true){
+            yield a;
+            [a,b]=[b,a+b];
+        }
+    };
+    var [first,second,third,fourth,fifth,sixth]=fibs();
+    sixth;
+    var {x=3}={x:null};
+    x;
+</script>
